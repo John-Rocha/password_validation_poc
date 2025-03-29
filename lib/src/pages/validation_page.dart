@@ -7,7 +7,7 @@ class ValidationPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Pages')),
-      body: Container(),
+      body: Text('Validation Page'),
     );
   }
 }
