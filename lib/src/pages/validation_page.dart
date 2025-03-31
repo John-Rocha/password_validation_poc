@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:password_validation_poc/src/pages/widgets/password_validation_button.dart';
 import 'package:password_validation_poc/src/pages/widgets/password_validation_panel_widget.dart';
 import 'package:password_validation_poc/src/shared/colors_app.dart';
 import 'package:password_validation_poc/src/shared/custom_text_field_pwd.dart';
@@ -67,10 +68,12 @@ class _ValidationPageState extends State<ValidationPage> {
               PasswordValidationPanelWidget(
                 passwordController: passwordController,
                 confirmPasswordController: confirmPasswordController,
-                onPasswordValid: (value) {},
+                onPasswordValid: (isValid) {},
               ),
               const SizedBox(height: 40),
-              ElevatedButton(onPressed: () {}, child: Text('Senha Reprovada')),
+              PasswordValidationButton(
+                variant: PasswordValidationButtonVariant.reproved,
+              ),
             ],
           ),
         ),
